@@ -13,6 +13,7 @@
 		FF4F45F1270C0ADB00C3A4D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4F45EF270C0ADB00C3A4D3 /* Main.storyboard */; };
 		FF4F45F3270C0ADD00C3A4D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF4F45F2270C0ADD00C3A4D3 /* Assets.xcassets */; };
 		FF4F45F6270C0ADD00C3A4D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4F45F4270C0ADD00C3A4D3 /* LaunchScreen.storyboard */; };
+		FF4F4601270D354E00C3A4D3 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4F4600270D354E00C3A4D3 /* Todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FF4F45F2270C0ADD00C3A4D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF4F45F5270C0ADD00C3A4D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF4F45F7270C0ADD00C3A4D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF4F4600270D354E00C3A4D3 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		FF4F45E8270C0ADB00C3A4D3 /* Practice-Problem */ = {
 			isa = PBXGroup;
 			children = (
+				FF4F45FD270D33EB00C3A4D3 /* Models */,
+				FF4F45FF270D33FB00C3A4D3 /* Views */,
+				FF4F45FE270D33F200C3A4D3 /* View Controllers */,
 				FF4F45E9270C0ADB00C3A4D3 /* AppDelegate.swift */,
 				FF4F45EB270C0ADB00C3A4D3 /* SceneDelegate.swift */,
-				FF4F45ED270C0ADB00C3A4D3 /* ViewController.swift */,
-				FF4F45EF270C0ADB00C3A4D3 /* Main.storyboard */,
 				FF4F45F2270C0ADD00C3A4D3 /* Assets.xcassets */,
 				FF4F45F4270C0ADD00C3A4D3 /* LaunchScreen.storyboard */,
 				FF4F45F7270C0ADD00C3A4D3 /* Info.plist */,
 			);
 			path = "Practice-Problem";
+			sourceTree = "<group>";
+		};
+		FF4F45FD270D33EB00C3A4D3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF4F4600270D354E00C3A4D3 /* Todo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF4F45FE270D33F200C3A4D3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF4F45ED270C0ADB00C3A4D3 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FF4F45FF270D33FB00C3A4D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF4F45EF270C0ADB00C3A4D3 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +168,7 @@
 				FF4F45EE270C0ADB00C3A4D3 /* ViewController.swift in Sources */,
 				FF4F45EA270C0ADB00C3A4D3 /* AppDelegate.swift in Sources */,
 				FF4F45EC270C0ADB00C3A4D3 /* SceneDelegate.swift in Sources */,
+				FF4F4601270D354E00C3A4D3 /* Todo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +320,7 @@
 				DEVELOPMENT_TEAM = Y535846H6P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Practice-Problem/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Practice;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -320,6 +349,7 @@
 				DEVELOPMENT_TEAM = Y535846H6P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Practice-Problem/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Practice;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
