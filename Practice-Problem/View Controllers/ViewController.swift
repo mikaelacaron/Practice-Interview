@@ -17,20 +17,23 @@ enum HttpError: Error {
 
 final class ViewController: UIViewController {
     
+    let spinner = UIActivityIndicatorView(style: .large)
     var todos = [Todo]()
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        getData { result in
+        addSpinner()
+        getData { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .failure(let error):
                 print("❌ \(error)")
             case .success(let todos):
                 self.todos = todos
                 DispatchQueue.main.async {
+                    self.removeSpinner()
                     self.tableView.reloadData()
                 }
             }
@@ -68,6 +71,21 @@ final class ViewController: UIViewController {
             }
             
         }.resume()
+    }
+    
+    private func addSpinner() {
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(spinner)
+        NSLayoutConstraint.activate([
+            spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+        spinner.startAnimating()
+    }
+    
+    private func removeSpinner() {
+        spinner.stopAnimating()
+        spinner.removeFromSuperview()
     }
 }
 
