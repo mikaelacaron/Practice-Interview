@@ -33,7 +33,6 @@ final class ViewController: UIViewController {
             case .success(let todos):
                 self.todos = todos
                 DispatchQueue.main.async {
-                    self.removeSpinner()
                     self.tableView.reloadData()
                 }
             }
